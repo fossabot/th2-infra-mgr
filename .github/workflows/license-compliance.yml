@@ -21,7 +21,7 @@ jobs:
     #     pip install pip==20.0.2 && \
     #     pip install -r requirements.txt
     - name: LicenseFinder report
-      run: license_finder report --python-version=3
+      run: license_finder report --prepare
     # - name: apply approved licenses
     #   run: |
     #     cat .github/workflows/approved-licenses.txt | xargs -L1 license_finder  permitted_licenses add > /dev/null
