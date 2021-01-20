@@ -1,0 +1,30 @@
+name: LicenseFinder
+
+on: [push]
+
+jobs:
+  LicenseFinder:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.6
+    - name: Install LicenseFInder
+      run: gem install license_finder
+    # - name: pip install requirements
+    #   run: |
+    #     pip install pip==20.0.2 && \
+    #     pip install -r requirements.txt
+    - name: LicenseFinder report
+      run: license_finder report --python-version=3
+    # - name: apply approved licenses
+    #   run: |
+    #     cat .github/workflows/approved-licenses.txt | xargs -L1 license_finder  permitted_licenses add > /dev/null
+    #     license_finder permitted_licenses list
+    # - name: Run LicenseFinder compliance checking
+    #   run: license_finder
