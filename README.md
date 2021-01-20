@@ -1,4 +1,6 @@
 # infra-mgr
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FMaximus905%2Fth2-infra-mgr.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FMaximus905%2Fth2-infra-mgr?ref=badge_shield)
+
 infra-mgr is a component responsible for rolling out schemas from git repository to kubernetes.
 It watches for changes in the repositories and deploys changed components to kubernets.
 Depending on the schema configuration, it also monitors kubernetes and if it detects external manipulation on deployed component, redeploys them from latest repository version.
@@ -100,3 +102,7 @@ infra-mgr configuration is given with *config.yml* file that should be on the cl
 
 ```
 ## 
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FMaximus905%2Fth2-infra-mgr.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FMaximus905%2Fth2-infra-mgr?ref=badge_large)
